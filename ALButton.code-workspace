@@ -1,0 +1,24 @@
+{
+	"extensions": {
+		"recommendations": [
+			"waldo.al-extension-pack"
+		]
+	},
+	"folders": [
+		{
+			"path": "ALButtonApp"
+		},
+		{
+			"path": "ALButtonTest"
+		}
+	],
+	"settings": {
+		"al.codeAnalyzers": [
+			"${AppSourceCop}",
+			"${CodeCop}",
+			"${UICop}"
+		],
+		"al.enableCodeAnalysis": true,
+		"al.enableCodeActions": true
+	}
+}

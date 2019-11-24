@@ -1,0 +1,10 @@
+**/node_modules
+*.app
+.alpackages
+.alcache
+.altemplates
+*.p12
+**/.vscode/*
+sign.ps1
+signtool*
+test.ps1

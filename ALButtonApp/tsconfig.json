@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "none",
+    "removeComments": true,
+    "strict": false,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./src/Controls",
+    "typeRoots": [ "./types", "./node_modules/@types"],    
+    "esModuleInterop": true
+  }
+}

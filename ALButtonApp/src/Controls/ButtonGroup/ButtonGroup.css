@@ -1,0 +1,6 @@
+/** Button Group Styles **/
+/*-----------------------*/
+
+div.al-button-group button.al-button:first-child {
+    margin-left: 0px !important;
+}

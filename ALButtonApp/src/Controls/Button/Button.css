@@ -1,0 +1,103 @@
+/** Button Styles **/
+/*-----------------*/
+
+/** Reset Button styles **/
+
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    color: inherit;
+}
+
+button:focus, button:active {
+    outline: none;
+}
+
+/** Normal Button **/
+
+button.al-button {
+    margin: 3.5px;
+    padding: 0 20px;
+    height: 32px;
+    min-width: 84px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #8a8886;
+    border-radius: 2px;
+    background: #fff;
+    color: #333;
+}
+
+button.al-button:focus, button.al-button:active {
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: rgb(0, 132, 137);
+    outline-offset: -3px;
+}
+
+button.al-button:hover {
+    background: rgb(246, 247, 248);
+}
+
+button.al-button span {
+    font-family: "Segoe UI Semibold", "Segoe WP Semibold", device-segoe-semibold, "Segoe UI", "Segoe WP", Segoe, Tahoma, Helvetica, Arial, sans-serif !important;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** Primary Button **/
+
+button.al-button-primary {
+    border-color: transparent !important;
+    background: rgb(0, 132, 137) !important;
+    color: #fff !important;
+}
+
+button.al-button-primary:focus, button.al-button-primary:active {
+    outline-color: #fff !important;
+    outline-offset: -3px !important;
+}
+
+button.al-button-primary:hover {
+    background: rgb(0, 126, 135) !important;
+}
+
+/** Danger Button **/
+
+button.al-button-danger {
+    border-color: transparent !important;
+    background: #E65E6D !important;
+    color: #fff !important;
+}
+
+button.al-button-danger:focus, button.al-button-danger:active {
+    outline-color: #fff !important;
+    outline-offset: -3px !important;
+}
+
+button.al-button-danger:hover {
+    background: rgb(201, 85, 98) !important;
+}
+
+/** Info Button **/
+
+button.al-button-info {
+    border-color: rgb(68, 68, 68);
+}
+
+button.al-button-info:focus, button.al-button-info:active {
+    outline-color: rgb(146, 192, 224) !important;
+    outline-offset: -3px !important;
+}
+
+button.al-button-info:hover {
+    background: rgb(230, 242, 250) !important;    
+    border-color: #92c0e0;
+}
