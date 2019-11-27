@@ -146,7 +146,7 @@ node tests/js/runner.js --json --outputFile=jest.results.json --url "<url>" --us
 ```
 
 Parameters:
-- url: BC page url, e.b. `https://my-host/BC?page=87780`
+- url: BC page url, e.g. `https://my-host/BC?page=87780`
 - username: BC user name
 - password: BC user password
 
