@@ -8,3 +8,4 @@
 sign.ps1
 signtool*
 test.ps1
+ALButtonTest/jest.results.json
