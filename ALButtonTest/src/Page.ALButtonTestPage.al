@@ -55,6 +55,11 @@ page 87780 ALButtonTestPage_DSK
                     begin
                         Message('Custom Button Clicked!');
                     end;
+
+                    trigger OnError(message: Text)
+                    begin
+                        Error('Something happened: %1', message);
+                    end;
                 }
 
                 usercontrol("ALButton2"; ALButton_DSK)
