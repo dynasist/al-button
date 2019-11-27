@@ -111,6 +111,21 @@ usercontrol(ALButtonGroup; ALButtonGroup_DSK)
 
 1. Run `npm install` to restore javascript-related modules.
 2. Start `tsc: watch` VSCode task
+
+Contents of `ALButtonApp/.vscode/tasks.json` should you need it:
+```
+"tasks": [
+    {
+        "type": "typescript",
+        "tsconfig": "tsconfig.json",
+        "option": "watch",
+        "problemMatcher": [
+            "$tsc-watch"
+        ]
+    }
+]
+```
+
 3. Use `ALButtonApp\src\TypeScript` to modify javascript bits
 4. CSS styling is placed in `ALButtonApp\src\Controls\*.css` files
 
