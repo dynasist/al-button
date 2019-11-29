@@ -5,4 +5,5 @@ interface Window {
 
     // AL Button Group
     AddButton(caption: string, title: string, id: string, type: string): void;
+    RemoveButton(id: string): void;
 }

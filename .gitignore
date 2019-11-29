@@ -4,7 +4,8 @@
 .alcache
 .altemplates
 *.p12
-**/.vscode/*
+**/.vscode/launch.json
+**/.vscode/rad.json
 sign.ps1
 signtool*
 test.ps1

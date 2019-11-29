@@ -30,9 +30,9 @@ var Button = (function (_super) {
         }
         button.innerHTML = "<span>" + this.options.caption + "</span>";
         button.title = this.options.title;
-        button.addEventListener("click", function (e) {
+        button.addEventListener("click", (function (e) {
             Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("OnClick", [_this.options.id]);
-        });
+        }).bind(this));
         this.container.append(button);
     };
     Button.prototype.setup = function () {

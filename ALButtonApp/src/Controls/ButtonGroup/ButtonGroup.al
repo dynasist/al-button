@@ -30,4 +30,6 @@ controladdin ALButtonGroup_DSK
     event OnClick(id: Text);
 
     procedure AddButton(caption: Text; title: Text; id: Text; "type": Text);
+
+    procedure RemoveButton(id: Text);
 }

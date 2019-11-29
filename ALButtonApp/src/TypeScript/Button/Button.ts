@@ -19,9 +19,9 @@ class Button extends BaseControl {
         button.innerHTML = `<span>${this.options.caption}</span>`;
         button.title = this.options.title;
 
-        button.addEventListener("click", (e: MouseEvent) => {
+        button.addEventListener("click", ((e: MouseEvent) => {
             Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("OnClick", [this.options.id]);
-        });
+        }).bind(this));
 
         this.container.append(button);
     }

@@ -20,6 +20,9 @@ var ButtonGroup = (function (_super) {
         window.AddButton = (function (caption, title, id, type) {
             _this.add(caption, title, id, type);
         }).bind(_this);
+        window.RemoveButton = (function (id) {
+            _this.remove(id);
+        }).bind(_this);
         return _this;
     }
     ButtonGroup.prototype.add = function (caption, title, id, type) {
@@ -28,19 +31,34 @@ var ButtonGroup = (function (_super) {
         btn.setOption('title', title);
         btn.setOption('type', type);
         btn.setOption('id', id);
+        if (this.groupContainer) {
+            this.renderButton(btn, this.groupContainer);
+        }
         this.buttons.push(btn);
+    };
+    ButtonGroup.prototype.renderButton = function (btn, container) {
+        btn.container = container;
+        btn.create();
+    };
+    ButtonGroup.prototype.remove = function (id) {
+        var btn = document.getElementById(id);
+        if (btn !== null) {
+            btn.remove();
+        }
+    };
+    ButtonGroup.prototype.create = function () {
+        this.groupContainer = document.createElement('div');
+        this.groupContainer.classList.add('al-button-group');
+        for (var _i = 0, _a = this.buttons; _i < _a.length; _i++) {
+            var btn = _a[_i];
+            this.renderButton(btn, this.groupContainer);
+        }
+        this.container.append(this.groupContainer);
     };
     ButtonGroup.prototype.setup = function () {
         var _this = this;
         Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("OnLoad", [], false, (function () {
-            _this.groupContainer = document.createElement('div');
-            _this.groupContainer.classList.add('al-button-group');
-            for (var _i = 0, _a = _this.buttons; _i < _a.length; _i++) {
-                var btn = _a[_i];
-                btn.container = _this.groupContainer;
-                btn.render();
-            }
-            _this.container.append(_this.groupContainer);
+            _this.create();
         }).bind(this));
     };
     return ButtonGroup;

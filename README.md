@@ -142,7 +142,7 @@ Tests are placed in `ALButtonTest` folder.
 Run below command locally. This can be used with CI/CD pipelines as well.
 
 ```powershell
-node tests/js/runner.js --json --outputFile=jest.results.json --url "<url>" --username <name> --password <pass>
+node ALButtonTest/tests/js/runner.js --json --outputFile=jest.results.json --url "<url>" --username <name> --password <pass>
 ```
 
 Parameters:
